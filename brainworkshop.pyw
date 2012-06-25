@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #------------------------------------------------------------------------------
 # Brain Workshop: a Dual N-Back game in Python
 #
@@ -23,7 +24,8 @@ from time import strftime
 from datetime import date
 
 import gettext
-gettext.install('messages', localedir='res/i18n', unicode=True)
+lang = gettext.translation('brainworkshop', localedir='res/i18n', languages=['cs'])
+lang.install(unicode=True)
 
 # Clinical mode?  Clinical mode sets cfg.JAEGGI_MODE = True, enforces a minimal user
 # interface, and saves results into a binary file (default 'logfile.dat') which
@@ -52,12 +54,57 @@ WEB_DONATE = 'http://brainworkshop.net/donate.html'
 WEB_VERSION_CHECK = 'http://brainworkshop.net/version.txt'
 WEB_PYGLET_DOWNLOAD = 'http://pyglet.org/download.html'
 WEB_FORUM = 'http://groups.google.com/group/brain-training'
-WEB_MORSE = 'http://en.wikipedia.org/wiki/Morse_code'
+WEB_MORSE = _('http://en.wikipedia.org/wiki/Morse_code')
+WEB_AVBIN = 'http://code.google.com/p/avbin/'
 TIMEOUT_SILENT = 3
 TICKS_MIN = 3
 TICKS_MAX = 50
 TICK_DURATION = 0.1
-                                           
+
+# modality buttons need to be localizable
+MODALITY_LABELS_SHORT = {'position': _('position'),
+                         'position1': _('position 1'),
+                         'position2': _('position 2'),
+                         'position3': _('position 3'),
+                         'position4': _('position 4'),
+                         'color': _('color'),
+                         'audio': _('audio'),
+                         'audio2': _('audio 2'),
+                         'visvis': _('vis & n-vis'),
+                         'visaudio': _('vis & n-audio'),
+                         'audiovis': _('audio & n-vis'),
+                         'arithmetic': _('arithmentic'),
+                         'image': _('image')}
+
+MODALITY_LABELS_LONG = {'position': _('position match'),
+                        'position1': _('position 1 match'),
+                        'position2': _('position 2 match'),
+                        'position3': _('position 3 match'),
+                        'position4': _('position 4 match'),
+                        'color': _('color match'),
+                        'audio': _('audio match'),
+                        'audio2': _('audio 2 match'),
+                        'visvis': _('vis & n-vis match'),
+                        'visaudio': _('vis & n-audio match'),
+                        'audiovis': _('audio & n-vis match'),
+                        'arithmetic': _('arithmentic match'),
+                        'image': _('image match')}
+
+SOUND_SET_NAMES = {'corsica-letters': _('corsica-letters'),
+                   'letters': _('letters'),
+                   'czech-letters': _('czech-letters'),
+                   'morse': _('morse'),
+                   'nato': _('nato'),
+                   'numbers': _('numbers'),
+                   'czech-numbers': _('czech-numbers'),
+                   'piano': _('piano')}
+
+IMAGE_SET_NAMES = {'polygons-basic': _('polygons-basic'),
+                   'national-park-service': _('national-park-service'),
+                   'pentominoes': _('pentominoes'),
+                   'tetrominoes-fixed': _('tetrominoes-fixed'),
+                   'cartoon-faces': _('cartoon-faces')}
+
 # some functions to assist in path determination
 def main_is_frozen():
     return (hasattr(sys, "frozen") or # new py2exe
@@ -247,12 +294,12 @@ IMAGE_SETS = ['polygons-basic', 'national-park-service', 'pentominoes',
 # Select any combination of letters, numbers, the NATO Phonetic Alphabet
 # (Alpha, Bravo, Charlie, etc), the C scale on piano, and morse code.
 # AUDIO1_SETS = ['letters', 'morse', 'nato', 'numbers', 'piano']
-AUDIO1_SETS = ['letters']
+AUDIO1_SETS = ['czech-letters']
 
 # Sound configuration for the Dual Audio (A-A) task.
 # Possible values for CHANNEL_AUDIO1 and CHANNEL_AUDIO2:
 #    'left' 'right' 'center'
-AUDIO2_SETS = ['letters']
+AUDIO2_SETS = ['czech-letters']
 CHANNEL_AUDIO1 = 'left'
 CHANNEL_AUDIO2 = 'right'
 
@@ -872,7 +919,7 @@ def test_avbin():
         if pyglet.version >= '1.2':  
             pyglet.media.have_avbin = False
         print _('AVBin not detected. Music disabled.')
-        print _('Download AVBin from: http://code.google.com/p/avbin/')
+        print _('Download AVBin from: %s' % (WEB_AVBIN, ))
 
     except: # WindowsError
         cfg.USE_MUSIC = False
@@ -1196,7 +1243,7 @@ class Mode:
                        'vis2':      False,
                        'vis3':      False,
                        'vis4':      False,
-                       'visvis':    False, 
+                       'visvis':    False,
                        'visaudio':  False,
                        'audiovis':  False,
                        'audio':     False,
@@ -1212,12 +1259,12 @@ class Mode:
                           'vis2':      0.,
                           'vis3':      0.,
                           'vis4':      0.,
-                          'visvis':    0., 
+                          'visvis':    0.,
                           'visaudio':  0.,
                           'audiovis':  0.,
                           'audio':     0.,
                           'audio2':    0.}
-                            
+
         self.hide_text = cfg.HIDE_TEXT
         
         self.current_stim = {'position1': 0,
@@ -1364,9 +1411,9 @@ class Graph:
 
                 statsfile.close()
             except:
-                quit_with_error(_('Error parsing stats file\n %s') % 
+                quit_with_error(_('Error parsing stats file\n%s') % 
                                 os.path.join(get_data_dir(), cfg.STATSFILE),
-                                _('Please fix, delete or rename the stats file.'))
+                                _('\nPlease fix, delete or rename the stats file.'))
 
             def mean(x):
                 if len(x):
@@ -1674,7 +1721,7 @@ class TextInputScreen:
         self.document.set_style(0, len(self.document.text), {'color': self.textcolor})
         self.layout = pyglet.text.layout.IncrementalTextLayout(self.document,
             (window.width/2 - 20 - len(title)*6), (window.height*10)/11, batch=self.batch)
-        self.layout.x = (window.width)/2 + 15 + len(title)*6
+        self.layout.x = (window.width)/2 + 35 + len(title)*6
         if not callback: callback = lambda x: x
         self.callback = callback
         self.caret = pyglet.text.caret.Caret(self.layout)
@@ -1808,6 +1855,11 @@ class Menu:
     def textify(self, x):
         if type(x) == bool:
             return x and _('Yes') or _('No')
+        if str(x) == "left": return _('left')
+        if str(x) == "right": return _('right')
+        if str(x) == "center": return _('center')
+        if str(x) == "color": return _('color')
+        if str(x) == "image": return _('image')
         return str(x)
 
     def update_labels(self):
@@ -1980,6 +2032,11 @@ class GameSelect(Menu):
         options = modalities[:]
         names = dict([(m, _("Use %s") % m) for m in modalities])
         names['position1'] = _("Use position")
+        names['color'] = _("Use color")
+        names['image'] = _("Use image")
+        names['audio'] = _("Use audio")
+        names['audio2'] = _("Use audio2")
+        names['arithmetic'] = _("Use arithmetic")
         options.append("Blank line")
         options.append('combination')
         options.append("Blank line")
@@ -2146,7 +2203,10 @@ class ImageSelect(Menu):
         options = self.new_sets.keys()
         options.sort()
         vals = self.new_sets
-        Menu.__init__(self, options, vals, title=_('Choose images to use for the Image n-back tasks.'))
+        names = {}
+        for op in options:
+            names[op] = op in IMAGE_SET_NAMES and IMAGE_SET_NAMES[op] or op
+        Menu.__init__(self, options, vals, {}, names, title=_('Choose images to use for the Image n-back tasks.'))
 
     def close(self):
         while cfg.IMAGE_SETS:
@@ -2188,9 +2248,10 @@ class SoundSelect(Menu):
         names = {}
         for op in options:
             if op.startswith('1') or op.startswith('2'):
-                names[op] = _("Use sound set '%s' for channel %s") % (op[1:], op[0])
+                name = op[1:] in SOUND_SET_NAMES and SOUND_SET_NAMES[op[1:]] or op[1:]
+                names[op] = _("Use sound set '{0}' for channel {1}").format(name, op[0])
             elif 'CHANNEL_AUDIO' in op:
-                names[op] = 'Channel %i is' % (op[-1]=='2' and 2 or 1)
+                names[op] = _('Channel %i is') % (op[-1]=='2' and 2 or 1)
         Menu.__init__(self, options, vals, {}, names, title=_('Choose sound sets to Sound n-back tasks.'))
         
     def close(self):
@@ -2730,7 +2791,7 @@ class PausedLabel:
         self.update()
     def update(self):
         if mode.paused:
-            self.label.text = 'Paused'
+            self.label.text = _('Paused')
         else:
             self.label.text = ''
 
@@ -2772,25 +2833,30 @@ class FeedbackLabel:
         if self.letter == 'SEMICOLON': 
             self.letter = ';'      
         modalityname = modality
-        if modalityname.endswith('vis'):
-            modalityname = modalityname[:-3] + ' & n-vis'
-        elif modalityname.endswith('audio') and not modalityname == 'audio':
-            modalityname = modalityname[:-5] + ' & n-audio'
         if mode.flags[mode.mode]['multi'] == 1 and modalityname == 'position1':
             modalityname = 'position'
             
-	if total == 2 and not cfg.JAEGGI_MODE and cfg.ENABLE_MOUSE:
-	    if pos == 0:
-		self.mousetext = "Left-click or"
-	    if pos == 1:
-		self.mousetext = "Right-click or"
-	else:
-	    self.mousetext = ""
-
-        self.text = "%s %s: %s" % (_(self.mousetext), self.letter, _(modalityname)) # FIXME: will this break pyglettext?
+        if total == 2 and not cfg.JAEGGI_MODE and cfg.ENABLE_MOUSE:
+            if pos == 0:
+                self.mousetext = _("Left-click or")
+            if pos == 1:
+                self.mousetext = _("Right-click or")
+        else:
+            self.mousetext = ""
 
         if total < 4:
-            self.text += _(' match')
+            modalitylabels = MODALITY_LABELS_LONG
+        else:
+            modalitylabels = MODALITY_LABELS_SHORT
+
+        if modalityname in modalitylabels.keys():
+            modalitylabel = modalitylabels[modalityname]
+        else:
+            modalitylabel = modalityname
+
+        self.text = "%s %s: %s" % (self.mousetext, self.letter, modalitylabel) # FIXME: will this break pyglettext? # TODO: i18n
+
+        if total < 4:
             font_size = 16
         elif total < 5: font_size = 14
         elif total < 6: font_size = 13
@@ -2901,10 +2967,10 @@ class ArithmeticAnswerLabel:
         
         if cfg.SHOW_FEEDBACK and mode.show_missed:
             result = check_match('arithmetic')
-            if result == _('correct'):
+            if result == 'correct':
                 self.label.color = cfg.COLOR_LABEL_CORRECT
                 self.label.bold = True
-            if result == _('incorrect'):
+            if result == 'incorrect':
                 self.label.color = cfg.COLOR_LABEL_INCORRECT
                 self.label.bold = True
         else:
@@ -2956,8 +3022,8 @@ class SessionInfoLabel:
         if mode.started or CLINICAL_MODE:
             self.label.text = ''
         else:
-            self.label.text = _('Session:\n%1.2f sec/trial\n%i+%i trials\n%i seconds') % \
-                              (mode.ticks_per_trial / 10.0, mode.num_trials, \
+            self.label.text = _('Session:\n{0:1.2f} sec/trial\n{1}+{2} trials\n{3} seconds').format(
+                              mode.ticks_per_trial / 10.0, mode.num_trials, \
                                mode.num_trials_total - mode.num_trials, 
                                int((mode.ticks_per_trial / 10.0) * \
                                (mode.num_trials_total)))
@@ -2985,8 +3051,8 @@ class ThresholdLabel:
         if mode.started or mode.manual or CLINICAL_MODE:
             self.label.text = ''
         else:
-            self.label.text = _(u'Thresholds:\nRaise level: \u2265 %i%%\nLower level: < %i%%') % \
-            (get_threshold_advance(), get_threshold_fallback())   # '\u2265' = '>='
+            self.label.text = _(u'Thresholds:\nRaise level: \u2265 {0}%\nLower level: < {1}%').format(
+            get_threshold_advance(), get_threshold_fallback())   # '\u2265' = '>='
         
 # this controls the "press space to begin session #" text.
 class SpaceLabel:
@@ -3265,7 +3331,7 @@ class AverageLabel:
                 average = sum([sess[2] for sess in sessions]) / float(len(sessions))
             else:
                 average = 0.
-            self.label.text = _("%sNB average: %1.2f") % (mode.short_mode_names[mode.mode], average)
+            self.label.text = _("{0}NB average: {1:1.2f}").format(mode.short_mode_names[mode.mode], average)
 
 
 class TodayLabel:
@@ -3285,8 +3351,14 @@ class TodayLabel:
              his[2] ** mode.num_trials_exponent for his in stats.history])
             total_time = mode.ticks_per_trial * TICK_DURATION * total_trials
             
-            self.labelTitle.text = _("%i min %i sec done today in %i sessions\
-			    %i min %i sec done in last 24 hours in %i sessions" % (stats.time_today//60, stats.time_today%60, stats.sessions_today, stats.time_thours//60, stats.time_thours%60, stats.sessions_thours))
+
+            labelTitleArgs = dict(stats.__dict__)
+            labelTitleArgs['time_today_min'] = stats.time_today // 60
+            labelTitleArgs['time_today_sec'] = stats.time_today % 60
+            labelTitleArgs['time_thours_min'] = stats.time_thours // 60
+            labelTitleArgs['time_thours_sec'] = stats.time_thours % 60
+            self.labelTitle.text = _("%(time_today_min)i min %(time_today_sec)i sec done today in %(sessions_today)i sessions\n%(time_thours_min)i min %(time_thours_sec)i sec done in last 24 hours in %(sessions_thours)i sessions") % labelTitleArgs
+
 
 class TrialsRemainingLabel:
     def __init__(self):
@@ -3348,49 +3420,38 @@ class Saccadic:
 
 class Panhandle:
     def __init__(self, n=-1):
-        paragraphs = [ 
-_("""
-You have completed %i sessions with Brain Workshop.  Your perseverance suggests \
-that you are finding some benefit from using the program.  If you have been \
-benefiting from Brain Workshop, don't you think Brain Workshop should \
-benefit from you?
-""") % n, 
-_("""
-Brain Workshop is and always will be 100% free.  Up until now, Brain Workshop \
-as a project has succeeded because a very small number of people have each \
-donated a huge amount of time to it.  It would be much better if the project \
-were supported by small donations from a large number of people.  Do your \
-part.  Donate.
-"""),
-_("""
-As of March 2010, Brain Workshop has been downloaded over 75,000 times in 20 \
-months.  If each downloader donated an average of $1, we could afford to pay \
-decent full- or part-time salaries (as appropriate) to all of our developers, \
-and we would be able to buy advertising to help people learn about Brain \
-Workshop.  With $2 per downloader, or with more downloaders, we could afford \
-to fund controlled experiments and clinical trials on Brain Workshop and \
-cognitive training.  Help us make that vision a reality.  Donate.
-"""),  
-_("""
-The authors think it important that access to cognitive training \
-technologies be available to everyone as freely as possible.  Like other \
-forms of education, cognitive training should not be a luxury of the rich, \
-since that would tend to exacerbate class disparity and conflict.  Charging \
-money for cognitive training does exactly that.  The commercial competitors \
-of Brain Workshop have two orders of magnitude more users than does Brain \
-Workshop because they have far more resources for research, development, and \
-marketing.  Help us bridge that gap and improve social equality of \
-opportunity.  Donate.
-"""),
-_("""
-Brain Workshop has many known bugs and missing features.  The developers \
-would like to fix these issues, but they also have to work in order to be \
-able to pay for rent and food.  If you think the developers' time is better \
-spent programming than serving coffee, then do something about it.  Donate.
-"""),
-_("""
-Press SPACE to continue, or press D to donate now.
-""")]    # feel free to add more paragraphs or to change the chances for the 
+        paragraphs = [
+_("You have completed %i sessions with Brain Workshop.  Your perseverance suggests "
+"that you are finding some benefit from using the program.  If you have been "
+"benefiting from Brain Workshop, don't you think Brain Workshop should "
+"benefit from you?\n\n") % n, 
+_("Brain Workshop is and always will be 100% free.  Up until now, Brain Workshop "
+"as a project has succeeded because a very small number of people have each "
+"donated a huge amount of time to it.  It would be much better if the project "
+"were supported by small donations from a large number of people.  Do your "
+"part.  Donate.\n\n"),
+_("As of March 2010, Brain Workshop has been downloaded over 75,000 times in 20 "
+"months.  If each downloader donated an average of $1, we could afford to pay "
+"decent full- or part-time salaries (as appropriate) to all of our developers, "
+"and we would be able to buy advertising to help people learn about Brain "
+"Workshop.  With $2 per downloader, or with more downloaders, we could afford "
+"to fund controlled experiments and clinical trials on Brain Workshop and "
+"cognitive training.  Help us make that vision a reality.  Donate.\n\n"),  
+_("The authors think it important that access to cognitive training "
+"technologies be available to everyone as freely as possible.  Like other "
+"forms of education, cognitive training should not be a luxury of the rich, "
+"since that would tend to exacerbate class disparity and conflict.  Charging "
+"money for cognitive training does exactly that.  The commercial competitors "
+"of Brain Workshop have two orders of magnitude more users than does Brain "
+"Workshop because they have far more resources for research, development, and "
+"marketing.  Help us bridge that gap and improve social equality of "
+"opportunity.  Donate.\n\n"),
+_("Brain Workshop has many known bugs and missing features.  The developers "
+"would like to fix these issues, but they also have to work in order to be "
+"able to pay for rent and food.  If you think the developers' time is better "
+"spent programming than serving coffee, then do something about it.  Donate."),
+_("Press SPACE to continue, or press D to donate now.")]    
+        # feel free to add more paragraphs or to change the chances for the 
         # paragraphs you like and dislike, etc.
         chances = [-1, 10, 10, 10, 10, 0] # if < 0, 100% chance of being included.  Otherwise, relative weight.
                                          # if == 0, appended to end and not counted
@@ -3416,7 +3477,7 @@ Press SPACE to continue, or press D to donate now.
         
         self.batch = pyglet.graphics.Batch()
         self.label = pyglet.text.Label(self.text, 
-                            font_name='Times New Roman',
+                            font_name='Helvetica',
                             color=cfg.COLOR_TEXT,
                             batch=self.batch,
                             multiline=True,

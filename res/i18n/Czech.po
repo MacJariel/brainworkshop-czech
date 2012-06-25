@@ -1,0 +1,997 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# , 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-10 14:18+0200\n"
+"PO-Revision-Date: 2012-06-10 14:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: ../../brainworkshop.py:57
+msgid "http://en.wikipedia.org/wiki/Morse_code"
+msgstr "http://cs.wikipedia.org/wiki/Morseova_abeceda"
+
+#: ../../brainworkshop.py:65
+msgid "position"
+msgstr "pozice"
+
+#: ../../brainworkshop.py:66
+msgid "position 1"
+msgstr "pozice 1 "
+
+#: ../../brainworkshop.py:67
+msgid "position 2"
+msgstr "pozice 2"
+
+#: ../../brainworkshop.py:68
+msgid "position 3"
+msgstr "pozice 3 "
+
+#: ../../brainworkshop.py:69
+msgid "position 4"
+msgstr "pozice 4  "
+
+#: ../../brainworkshop.py:70 ../../brainworkshop.py:1861
+msgid "color"
+msgstr "barva"
+
+#: ../../brainworkshop.py:71
+msgid "audio"
+msgstr "zvuk"
+
+#: ../../brainworkshop.py:72
+msgid "audio 2"
+msgstr "zvuk 2"
+
+#: ../../brainworkshop.py:73
+msgid "vis & n-vis"
+msgstr "vis & n-vis"
+
+#: ../../brainworkshop.py:74
+msgid "vis & n-audio"
+msgstr "vis & n-zvuk"
+
+#: ../../brainworkshop.py:75
+msgid "audio & n-vis"
+msgstr "zvuk & n-vis: "
+
+#: ../../brainworkshop.py:76
+msgid "arithmentic"
+msgstr "aritmetika"
+
+#: ../../brainworkshop.py:77 ../../brainworkshop.py:1862
+msgid "image"
+msgstr "obrázek"
+
+#: ../../brainworkshop.py:79
+msgid "position match"
+msgstr "shoda pozice"
+
+#: ../../brainworkshop.py:80
+msgid "position 1 match"
+msgstr "shoda pozice 1"
+
+#: ../../brainworkshop.py:81
+msgid "position 2 match"
+msgstr "shoda pozice 2"
+
+#: ../../brainworkshop.py:82
+msgid "position 3 match"
+msgstr "shoda pozice 3"
+
+#: ../../brainworkshop.py:83
+msgid "position 4 match"
+msgstr "shoda pozice 4 "
+
+#: ../../brainworkshop.py:84
+msgid "color match"
+msgstr "shoda v barvě"
+
+#: ../../brainworkshop.py:85
+msgid "audio match"
+msgstr "shoda ve zvuku"
+
+#: ../../brainworkshop.py:86
+msgid "audio 2 match"
+msgstr "shoda ve zvuku 2"
+
+#: ../../brainworkshop.py:87
+msgid "vis & n-vis match"
+msgstr "shoda vis & n-vis"
+
+#: ../../brainworkshop.py:88
+msgid "vis & n-audio match"
+msgstr "shoda vis & n-zvuk"
+
+#: ../../brainworkshop.py:89
+msgid "audio & n-vis match"
+msgstr "shoda zvuk & n-vis"
+
+#: ../../brainworkshop.py:90
+msgid "arithmentic match"
+msgstr "shoda v aritmetice"
+
+#: ../../brainworkshop.py:91
+msgid "image match"
+msgstr "shoda v obrázku"
+
+#: ../../brainworkshop.py:93
+msgid "corsica-letters"
+msgstr "anglické hlásky corsica"
+
+#: ../../brainworkshop.py:94
+msgid "letters"
+msgstr "anglické hlásky"
+
+#: ../../brainworkshop.py:95
+msgid "czech-letters"
+msgstr "české hlásky"
+
+#: ../../brainworkshop.py:96
+msgid "morse"
+msgstr "morseovka"
+
+#: ../../brainworkshop.py:97
+msgid "nato"
+msgstr "nato (anglicky)"
+
+#: ../../brainworkshop.py:98
+msgid "numbers"
+msgstr "anglická čísla"
+
+#: ../../brainworkshop.py:99
+msgid "czech-numbers"
+msgstr "česká čísla"
+
+#: ../../brainworkshop.py:100
+msgid "piano"
+msgstr "piáno"
+
+#: ../../brainworkshop.py:102
+msgid "polygons-basic"
+msgstr "mnohoúhelníky"
+
+#: ../../brainworkshop.py:103
+msgid "national-park-service"
+msgstr "značky z národních parků"
+
+#: ../../brainworkshop.py:104
+msgid "pentominoes"
+msgstr "sestavy pěti čtverců"
+
+#: ../../brainworkshop.py:105
+msgid "tetrominoes-fixed"
+msgstr "sestavy čtyř čtverců"
+
+#: ../../brainworkshop.py:106
+msgid "cartoon-faces"
+msgstr "kreslené obličeje"
+
+#: ../../brainworkshop.py:160
+msgid "Full text of error:\n"
+msgstr "Celý text chyby:\n"
+
+#: ../../brainworkshop.py:714
+#, python-format
+msgid "Unable to load config file: %s"
+msgstr "Nelze načíst konfikurační soubor: %s"
+
+#: ../../brainworkshop.py:854
+#, python-format
+msgid ""
+"Error: unable to load pyglet.  If you already installed pyglet, please "
+"ensure ctypes is installed.  Please visit %s"
+msgstr ""
+
+#: ../../brainworkshop.py:860
+msgid "No suitable audio driver could be loaded."
+msgstr ""
+
+#: ../../brainworkshop.py:869
+#, python-format
+msgid ""
+"Error: the resource folder\n"
+"%s"
+msgstr ""
+
+#: ../../brainworkshop.py:870
+msgid " does not exist or is not readable.  Exiting"
+msgstr ""
+
+#: ../../brainworkshop.py:873
+msgid "Error: pyglet 1.1 or greater is required.\n"
+msgstr ""
+
+#: ../../brainworkshop.py:874
+msgid "You probably have an older version of pyglet installed.\n"
+msgstr ""
+
+#: ../../brainworkshop.py:875
+#, python-format
+msgid "Please visit %s"
+msgstr ""
+
+#: ../../brainworkshop.py:921
+msgid "AVBin not detected. Music disabled."
+msgstr "Knihovna AVBin nenalezena. Nebude možné přehrávat hudbu."
+
+#: ../../brainworkshop.py:922
+#, python-format
+msgid "Download AVBin from: %s"
+msgstr "AVBin lze stáhnout z: %s"
+
+#: ../../brainworkshop.py:1127
+msgid "Dual"
+msgstr "Duální"
+
+#: ../../brainworkshop.py:1128
+msgid "Position, Color, Sound"
+msgstr "Pozice, Barva, Zvuk"
+
+#: ../../brainworkshop.py:1129
+msgid "Dual Combination"
+msgstr "Duální Kombinace"
+
+#: ../../brainworkshop.py:1130
+msgid "Tri Combination"
+msgstr "Trojitá Kombinace"
+
+#: ../../brainworkshop.py:1131
+msgid "Quad Combination"
+msgstr "Čtverná Kombinace"
+
+#: ../../brainworkshop.py:1132 ../../brainworkshop.py:3213
+msgid "Arithmetic"
+msgstr "Aritmetika"
+
+#: ../../brainworkshop.py:1133
+msgid "Dual Arithmetic"
+msgstr "Duální Aritmetika"
+
+#: ../../brainworkshop.py:1134
+msgid "Triple Arithmetic"
+msgstr "Trojitá Aritmetika"
+
+#: ../../brainworkshop.py:1135
+msgid "Position"
+msgstr "Pozice"
+
+#: ../../brainworkshop.py:1136
+msgid "Sound"
+msgstr "Zvuk"
+
+#: ../../brainworkshop.py:1137
+msgid "Tri Combination (Color)"
+msgstr "Trojitá kombinace (Barva)"
+
+#: ../../brainworkshop.py:1138
+msgid "Position, Color"
+msgstr "Pozice, Barva"
+
+#: ../../brainworkshop.py:1139
+msgid "Position, Image"
+msgstr "Pozice, Obrázek"
+
+#: ../../brainworkshop.py:1140
+msgid "Color, Sound"
+msgstr "Barva, Zvuk"
+
+#: ../../brainworkshop.py:1141
+msgid "Image, Sound"
+msgstr "Obrázek, Zvuk"
+
+#: ../../brainworkshop.py:1142
+msgid "Color, Image"
+msgstr "Barva, Obrázek"
+
+#: ../../brainworkshop.py:1143
+msgid "Position, Color, Image"
+msgstr "Pozice, Barva, Obrázek"
+
+#: ../../brainworkshop.py:1144
+msgid "Position, Image, Sound"
+msgstr "Pozice, Obrázek, Zvuk"
+
+#: ../../brainworkshop.py:1145
+msgid "Color, Image, Sound"
+msgstr "Barva, Obrázek, Zvuk"
+
+#: ../../brainworkshop.py:1146
+msgid "Quad"
+msgstr "Čtverná"
+
+#: ../../brainworkshop.py:1147
+msgid "Sound, Sound2"
+msgstr "Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1148
+msgid "Position, Sound, Sound2"
+msgstr "Pozice, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1149
+msgid "Color, Sound, Sound2"
+msgstr "Barva, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1150
+msgid "Image, Sound, Sound2"
+msgstr "Obrázek, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1151
+msgid "Position, Color, Sound, Sound2"
+msgstr "Pozice, Barva, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1152
+msgid "Position, Image, Sound, Sound2"
+msgstr "Pozice, Obrázek, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1153
+msgid "Color, Image, Sound, Sound2"
+msgstr "Barva, Obrázek, Zvuk, Zvuk2"
+
+#: ../../brainworkshop.py:1154
+msgid "Pentuple"
+msgstr "Paterná"
+
+#: ../../brainworkshop.py:1195
+msgid "Crab "
+msgstr "Krab "
+
+#: ../../brainworkshop.py:1201
+msgid "Double-stim"
+msgstr "Dvojitý-stim"
+
+#: ../../brainworkshop.py:1201
+msgid "Triple-stim"
+msgstr "Trojitý-stim"
+
+#: ../../brainworkshop.py:1201
+msgid "Quadruple-stim"
+msgstr "Čtverný-stim"
+
+#: ../../brainworkshop.py:1414 ../../brainworkshop.py:3591
+#, python-format
+msgid ""
+"Error parsing stats file\n"
+"%s"
+msgstr ""
+"Chyba při parsování stats souboru\n"
+"%s"
+
+#: ../../brainworkshop.py:1416 ../../brainworkshop.py:3593
+msgid ""
+"\n"
+"Please fix, delete or rename the stats file."
+msgstr ""
+"\n"
+"Prosím, opravte, smažte nebo přejmenujte stats soubor."
+
+#: ../../brainworkshop.py:1513
+msgid " N-Back"
+msgstr "N-Back "
+
+#: ../../brainworkshop.py:1522
+msgid ""
+"G: Return to Main Screen\n"
+"\n"
+"N: Next Game Type"
+msgstr ""
+"G: zpět na hlavní obrazovku\n"
+"\n"
+"N: další herní typ"
+
+#: ../../brainworkshop.py:1536
+msgid "Date"
+msgstr "Datum"
+
+#: ../../brainworkshop.py:1542
+msgid "Maximum"
+msgstr "Maximum"
+
+#: ../../brainworkshop.py:1548
+msgid "Average"
+msgstr "Průměr "
+
+#: ../../brainworkshop.py:1554
+msgid "Score"
+msgstr "Skóre"
+
+#: ../../brainworkshop.py:1563
+msgid "Insufficient data: two days needed"
+msgstr "Nedostatečné množství dat: jsou potřeba dva dny"
+
+#: ../../brainworkshop.py:1686
+msgid "Position: "
+msgstr "Pozice: "
+
+#: ../../brainworkshop.py:1686
+msgid "Position 2: "
+msgstr "Pozice 2: "
+
+#: ../../brainworkshop.py:1687
+msgid "Position 3: "
+msgstr "Pozice 3: "
+
+#: ../../brainworkshop.py:1687
+msgid "Position 4: "
+msgstr "Pozice 4: "
+
+#: ../../brainworkshop.py:1688
+msgid "Color/Image 1: "
+msgstr "Barva/Obrázek 1: "
+
+#: ../../brainworkshop.py:1688
+msgid "Color/Image 2: "
+msgstr "Barva/Obrázek 2: "
+
+#: ../../brainworkshop.py:1689
+msgid "Color/Image 3: "
+msgstr "Barva/Obrázek 3: "
+
+#: ../../brainworkshop.py:1689
+msgid "Color/Image 4: "
+msgstr "Barva/Obrázek 4: "
+
+#: ../../brainworkshop.py:1690
+msgid "Vis & nvis: "
+msgstr "Vis & nvis: "
+
+#: ../../brainworkshop.py:1690
+msgid "Vis & n-sound: "
+msgstr "Vis & n-zvuk: "
+
+#: ../../brainworkshop.py:1691
+msgid "Sound & n-vis: "
+msgstr "Zvuk & n-vis: "
+
+#: ../../brainworkshop.py:1691
+msgid "Sound: "
+msgstr "Zvuk: "
+
+#: ../../brainworkshop.py:1692
+msgid "Color: "
+msgstr "Barva: "
+
+#: ../../brainworkshop.py:1692
+msgid "Image: "
+msgstr "Obrázek: "
+
+#: ../../brainworkshop.py:1693
+msgid "Arithmetic: "
+msgstr "Aritmetika: "
+
+#: ../../brainworkshop.py:1693
+msgid "Sound2: "
+msgstr "Zvuk2: "
+
+#: ../../brainworkshop.py:1694
+msgid "Last 50 rounds:   "
+msgstr "Posledních 50 kol:   "
+
+#: ../../brainworkshop.py:1810
+msgid "Esc: cancel     Space: modify option     Enter: apply"
+msgstr "Esc: zrušit     Mezerník: upravit volbu    Enter: použít"
+
+#: ../../brainworkshop.py:1857
+msgid "Yes"
+msgstr "Ano"
+
+#: ../../brainworkshop.py:1857
+msgid "No"
+msgstr "Ne"
+
+#: ../../brainworkshop.py:1858
+msgid "left"
+msgstr "levý"
+
+#: ../../brainworkshop.py:1859
+msgid "right"
+msgstr "pravý"
+
+#: ../../brainworkshop.py:1860
+msgid "center"
+msgstr "střední"
+
+#: ../../brainworkshop.py:1967
+msgid "Choose Game Mode"
+msgstr "Zvolte herní režim"
+
+#: ../../brainworkshop.py:1968
+msgid "Choose Sounds"
+msgstr "Výběr zvuků"
+
+#: ../../brainworkshop.py:1969
+msgid "Choose Images"
+msgstr "Výběr obrázků"
+
+#: ../../brainworkshop.py:1970
+msgid "Choose User"
+msgstr "Výběr uživatele"
+
+#: ../../brainworkshop.py:1971
+msgid "Daily Progress Graph"
+msgstr "Graf denního vývoje"
+
+#: ../../brainworkshop.py:1972
+msgid "Help / Tutorial"
+msgstr "Nápověda / tutoriál"
+
+#: ../../brainworkshop.py:1973
+msgid "Donate"
+msgstr "Příspěvek autorům"
+
+#: ../../brainworkshop.py:1974
+msgid "Go to Forum / Mailing List"
+msgstr "Jít na forum (v angličtině)"
+
+#: ../../brainworkshop.py:1982 ../../brainworkshop.py:1995
+msgid "New user"
+msgstr "Nový uživatel"
+
+#: ../../brainworkshop.py:1985
+msgid "Please select your user profile"
+msgstr "Vyberte prosím váš uživatelský profil"
+
+#: ../../brainworkshop.py:1996
+msgid "Enter new user name:"
+msgstr "Zadejte jméno nového uživatele:"
+
+#: ../../brainworkshop.py:2008
+msgid "Please select your preferred language"
+msgstr "Vyberte váš preferovaný jazyk"
+
+#: ../../brainworkshop.py:2026
+msgid "Configuration"
+msgstr "Konfigurace"
+
+#: ../../brainworkshop.py:2033
+#, python-format
+msgid "Use %s"
+msgstr "Použít %s"
+
+#: ../../brainworkshop.py:2034
+msgid "Use position"
+msgstr "Použít pozici"
+
+#: ../../brainworkshop.py:2035
+msgid "Use color"
+msgstr "Použít barvu"
+
+#: ../../brainworkshop.py:2036
+msgid "Use image"
+msgstr "Použít obrázek"
+
+#: ../../brainworkshop.py:2037
+msgid "Use audio"
+msgstr "Použít zvuk"
+
+#: ../../brainworkshop.py:2038
+msgid "Use audio2"
+msgstr "Použít zvuk2"
+
+#: ../../brainworkshop.py:2039
+msgid "Use arithmetic"
+msgstr "Použít aritmetiku"
+
+#: ../../brainworkshop.py:2052
+msgid "Combination N-back mode"
+msgstr "Kombinovaný N-back režim"
+
+#: ../../brainworkshop.py:2053
+msgid "Use variable N-Back levels"
+msgstr "Použít proměnlivé úrovně N-Back"
+
+#: ../../brainworkshop.py:2054
+msgid "Crab-back mode (reverse order of sets of N stimuli)"
+msgstr "Crab-back režim (obrácené pořadí sad N stimulů)"
+
+#: ../../brainworkshop.py:2055
+msgid "Simultaneous visual stimuli"
+msgstr "Simultánní vizuální stimuly"
+
+# Je třeba poladit
+#: ../../brainworkshop.py:2056
+msgid "Simultaneous stimuli differentiated by"
+msgstr "Simultánní stimuly rozlišené"
+
+# TODO
+#: ../../brainworkshop.py:2057
+msgid "Self-paced mode"
+msgstr ""
+
+#: ../../brainworkshop.py:2058
+msgid "Interference (tricky stimulus generation)"
+msgstr "Rušení (generování klamných stimulů)"
+
+#: ../../brainworkshop.py:2078
+msgid "Choose your game mode"
+msgstr "Zvolte si váš herní režim"
+
+#: ../../brainworkshop.py:2093
+msgid "An invalid mode has been selected."
+msgstr "Byl zvolen neplatný herní režim."
+
+#: ../../brainworkshop.py:2209
+msgid "Choose images to use for the Image n-back tasks."
+msgstr "Vyberte obrázky pro obrazové cvičení n-back."
+
+# TODO
+#: ../../brainworkshop.py:2252
+msgid "Use sound set '{0}' for channel {1}"
+msgstr "Použít sadu zvuků '{0}' pro kanál {1}"
+
+#: ../../brainworkshop.py:2254
+#, python-format
+msgid "Channel %i is"
+msgstr "Kanál %i je"
+
+#: ../../brainworkshop.py:2255
+msgid "Choose sound sets to Sound n-back tasks."
+msgstr "Vyberte sady zvuků pro zvukové cvičení n-back."
+
+#: ../../brainworkshop.py:2586
+msgid "An update is available ("
+msgstr "Je k dispozici aktualizace ("
+
+#: ../../brainworkshop.py:2588
+msgid "). Press W to open web site"
+msgstr "). Stiskněte W pro otevření webové stránky"
+
+#: ../../brainworkshop.py:2608
+msgid "Jaeggi mode: "
+msgstr "Režim Jaeggi: "
+
+#: ../../brainworkshop.py:2610
+msgid "Manual mode: "
+msgstr "Manuální režim: "
+
+#: ../../brainworkshop.py:2613 ../../brainworkshop.py:3079
+msgid "V. "
+msgstr ""
+
+#: ../../brainworkshop.py:2615 ../../brainworkshop.py:3081
+msgid "-Back"
+msgstr ""
+
+#: ../../brainworkshop.py:2638
+msgid "Please disable Jaeggi Mode to access additional modes."
+msgstr "Deaktivujte režim Jaeggi pro přístup k dalším variantám."
+
+#: ../../brainworkshop.py:2659
+msgid "P: Pause / Unpause\n"
+msgstr "P: pauza / pokračování\n"
+
+#: ../../brainworkshop.py:2661
+msgid "F8: Hide / Reveal Text\n"
+msgstr "F8: skrýt / zobrazit text\n"
+
+#: ../../brainworkshop.py:2663
+msgid "ESC: Cancel Session\n"
+msgstr "ESC: zrušit cvičení\n"
+
+#: ../../brainworkshop.py:2666
+msgid "ESC: Exit"
+msgstr "ESC: konec"
+
+#: ../../brainworkshop.py:2673
+msgid "J: Morse Code Reference\n"
+msgstr "J: Morseova abeceda\n"
+
+#: ../../brainworkshop.py:2675 ../../brainworkshop.py:2735
+msgid "H: Help / Tutorial\n"
+msgstr "H: nápověda / tutoriál\n"
+
+#: ../../brainworkshop.py:2678
+msgid "F1: Decrease N-Back\n"
+msgstr "F1: snížit úroveň N-Back\n"
+
+#: ../../brainworkshop.py:2679
+msgid "F2: Increase N-Back\n"
+msgstr "F2: zvýšit úroveň N-Back\n"
+
+#: ../../brainworkshop.py:2681
+msgid "F3: Decrease Trials\n"
+msgstr "F3: snížit počet pokusů\n"
+
+#: ../../brainworkshop.py:2682
+msgid "F4: Increase Trials\n"
+msgstr "F4: zvýšit počet pokusů\n"
+
+#: ../../brainworkshop.py:2685
+msgid "F5: Decrease Speed\n"
+msgstr "F5: Snížit rychlost\n"
+
+#: ../../brainworkshop.py:2686
+msgid "F6: Increase Speed\n"
+msgstr "F6: zvýšit rychlost\n"
+
+#: ../../brainworkshop.py:2688
+msgid "C: Choose Game Type\n"
+msgstr "C: vybrat typ hry\n"
+
+#: ../../brainworkshop.py:2689
+msgid "S: Select Sounds\n"
+msgstr "S: vybrat zvuky\n"
+
+#: ../../brainworkshop.py:2690
+msgid "I: Select Images\n"
+msgstr "I: vybrat obrázky\n"
+
+#: ../../brainworkshop.py:2692
+msgid "M: Standard Mode\n"
+msgstr "M: standardní režim\n"
+
+#: ../../brainworkshop.py:2694
+msgid "M: Manual Mode\n"
+msgstr "M: manuální režim\n"
+
+#: ../../brainworkshop.py:2695 ../../brainworkshop.py:2737
+msgid "D: Donate\n"
+msgstr "D: příspěvek autorům\n"
+
+#: ../../brainworkshop.py:2697 ../../brainworkshop.py:2734
+msgid "G: Daily Progress Graph\n"
+msgstr "G: graf denního vývoje\n"
+
+#: ../../brainworkshop.py:2699
+msgid "W: Brain Workshop Web Site\n"
+msgstr "W: web Brain Workshop\n"
+
+#: ../../brainworkshop.py:2701
+msgid "E: Saccadic Eye Exercise\n"
+msgstr "E: cvičení pro sakadické pohyby oka\n"
+
+#: ../../brainworkshop.py:2703
+msgid "ESC: Exit\n"
+msgstr "ESC: konec\n"
+
+#: ../../brainworkshop.py:2710
+msgid "Brain Workshop"
+msgstr ""
+
+#: ../../brainworkshop.py:2716
+msgid "Version "
+msgstr "Verze "
+
+#: ../../brainworkshop.py:2729
+msgid "C: Choose Game Mode\n"
+msgstr "C: výběr herního režimu\n"
+
+#: ../../brainworkshop.py:2730
+msgid "S: Choose Sounds\n"
+msgstr "S: výběr zvuků\n"
+
+#: ../../brainworkshop.py:2731
+msgid "I: Choose Images\n"
+msgstr "I: výběr obrázků\n"
+
+#: ../../brainworkshop.py:2733
+msgid "U: Choose User\n"
+msgstr "U: výběr uživatele\n"
+
+#: ../../brainworkshop.py:2738
+msgid "F: Go to Forum / Mailing List\n"
+msgstr "F: forum (v angličtině)\n"
+
+#: ../../brainworkshop.py:2739
+msgid "O: Edit configuration file"
+msgstr "O: editace konfig. souboru"
+
+#: ../../brainworkshop.py:2749
+msgid "Press SPACE to enter the Workshop"
+msgstr "Stiskněte MEZERNÍK pro spuštění hry"
+
+#: ../../brainworkshop.py:2794
+msgid "Paused"
+msgstr "Pauza"
+
+#: ../../brainworkshop.py:2811
+msgid "Perfect score! "
+msgstr "Perfektní výsledek! "
+
+#: ../../brainworkshop.py:2812
+msgid "Awesome score! "
+msgstr "Výborný výsledek! "
+
+#: ../../brainworkshop.py:2813
+msgid "Great score! "
+msgstr "Dobrý výsledek! "
+
+#: ../../brainworkshop.py:2814
+msgid "Not bad! "
+msgstr "Není to špatné! "
+
+#: ../../brainworkshop.py:2815
+msgid "Keep trying. You're getting there! "
+msgstr "Zkoušejte to dále. Povede se vám to! "
+
+#: ../../brainworkshop.py:2817
+msgid "N-Back increased"
+msgstr "Úroveň N-Back byla zvýšena."
+
+#: ../../brainworkshop.py:2819
+msgid "N-Back decreased"
+msgstr "Úroveň N-Back byla snížena."
+
+#: ../../brainworkshop.py:2841
+msgid "Left-click or"
+msgstr "Levý klik nebo"
+
+#: ../../brainworkshop.py:2843
+msgid "Right-click or"
+msgstr "Pravý klik nebo"
+
+#: ../../brainworkshop.py:2964
+msgid "Answer: "
+msgstr "Odpověď: "
+
+#: ../../brainworkshop.py:3025
+msgid ""
+"Session:\n"
+"{0:1.2f} sec/trial\n"
+"{1}+{2} trials\n"
+"{3} seconds"
+msgstr ""
+"Cvičení:\n"
+"{0:1.2f} sek./pokus\n"
+"{1}+{2} pokusů\n"
+"{3} sekund"
+
+#: ../../brainworkshop.py:3054
+msgid ""
+"Thresholds:\n"
+"Raise level: ≥ {0}%\n"
+"Lower level: < {1}%"
+msgstr ""
+"Limity pro změnu obtížnosti:\n"
+"Zvýšení: ≥ {0}%\n"
+"Snížení: < {1}%"
+
+#: ../../brainworkshop.py:3073
+msgid "Press SPACE to begin session #"
+msgstr "Stiskněte MEZERNÍK pro začátek cvičení č. "
+
+#: ../../brainworkshop.py:3202
+msgid "Correct-Errors:   "
+msgstr "Správné-Chyby:   "
+
+#: ../../brainworkshop.py:3229
+#, python-format
+msgid "Lowest score: %i%%"
+msgstr "Nejnižší skóre: %i%%"
+
+#: ../../brainworkshop.py:3232
+#, python-format
+msgid "Score: %i%%"
+msgstr "Skóre: %i%%"
+
+#: ../../brainworkshop.py:3256
+msgid "Today's Last 20:"
+msgstr "Dnešních posledních 20:"
+
+#: ../../brainworkshop.py:3334
+msgid "{0}NB average: {1:1.2f}"
+msgstr "{0}NB průměr: {1:1.2f}"
+
+#: ../../brainworkshop.py:3360
+#, python-format
+msgid ""
+"%(time_today_min)i min %(time_today_sec)i sec done today in "
+"%(sessions_today)i sessions\n"
+"%(time_thours_min)i min %(time_thours_sec)i sec done in last 24 hours in "
+"%(sessions_thours)i sessions"
+msgstr ""
+"%(time_today_min)i minut %(time_today_sec)i sekund dnes ve "
+"%(sessions_today)i cvičeních\n"
+"%(time_thours_min)i minut %(time_thours_sec)i sekund za posledních 24 hodin "
+"ve %(sessions_thours)i cvičeních"
+
+#: ../../brainworkshop.py:3376
+#, python-format
+msgid "%i remaining"
+msgstr "%i zbývá"
+
+#: ../../brainworkshop.py:3424
+#, python-format
+msgid ""
+"You have completed %i sessions with Brain Workshop.  Your perseverance "
+"suggests "
+msgstr ""
+
+#: ../../brainworkshop.py:3428
+#, python-format
+msgid ""
+"Brain Workshop is and always will be 100% free.  Up until now, Brain "
+"Workshop "
+msgstr ""
+
+#: ../../brainworkshop.py:3433
+msgid ""
+"As of March 2010, Brain Workshop has been downloaded over 75,000 times in 20 "
+msgstr ""
+
+#: ../../brainworkshop.py:3440
+msgid "The authors think it important that access to cognitive training "
+msgstr ""
+
+#: ../../brainworkshop.py:3449
+msgid ""
+"Brain Workshop has many known bugs and missing features.  The developers "
+msgstr ""
+
+#: ../../brainworkshop.py:3453
+msgid "Press SPACE to continue, or press D to donate now."
+msgstr ""
+"Stiskněte MEZERNÍK pro pokračování nebo stiskněte D pro příspěvek autorům. "
+
+#: ../../brainworkshop.py:3766
+#, python-format
+msgid ""
+"Error writing to stats file\n"
+"%s"
+msgstr ""
+"Chyba při zápisu do stats souboru\n"
+"%s"
+
+#: ../../brainworkshop.py:3768
+msgid ""
+"\n"
+"Please check file and directory permissions."
+msgstr ""
+"\n"
+"Prosím zkontrolujte oprávnění souboru a adresáře."
+
+#~ msgid ""
+#~ "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+#~ "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+#~ "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem!!\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Nazdar svete\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "You have completed %i sessions with Brain Workshop.  Your perseverance "
+#~ "suggests that you are finding some benefit from using the program.  If "
+#~ "you have been benefiting from Brain Workshop, don't you think Brain "
+#~ "Workshop should benefit from you?\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Splnili jste %i cvičení pomocí programu Brain Workshop. Zdá se, že "
+#~ "používání tohoto programu Vám přináší užitek. Pokud Vám Brain Workshop "
+#~ "přináší užitek, myslíte, že i vy můžete být pro Brain Workshop užiteční?\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Brain Workshop is and always will be 100% free.  Up until now, Brain "
+#~ "Workshop as a project has succeeded because a very small number of people "
+#~ "have each donated a huge amount of time to it.  It would be much better "
+#~ "if the project were supported by small donations from a large number of "
+#~ "people.  Do your part.  Donate.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Brain Workshop je a vždy bude zcela zdarma. Do této doby byl projekt "
+#~ "úspěšný jelikož velmi malá skupina lidí přispěla do projektu obrovským "
+#~ "množstvím svého času. Bylo by mnohem lepší, kdyby byl projekt podporován "
+#~ "drobnými příspěvky od velké skupiny lidí. Zúčastněte se taky. Přispějte.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "AHOJ SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! "
+#~ "SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! "
+#~ "SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! "
+#~ "SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! SVETE!! "
+#~ "SVETE!! SVETE!! SVETE!! SVETE!! SVETE!!  JAK SE MAS"
+#~ msgstr "CAU TY JEDEN VOLE!"
+
+#~ msgid "AHOJ SVETE!! JAK SE MAS"
+#~ msgstr "NAZDAR VOLE!!!"
